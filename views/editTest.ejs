@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include CSS files -->
+    <link rel="stylesheet" href="../public/styles/editglobal.css" />
+    <link rel="stylesheet" href="../public/styles/editTest.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap"
+    />
+    <link rel="icon" href="./images/favicon.ico">
+
+
+    <!-- Set the page title -->
+    <title><%= pageTitle %></title>
+</head>
+
+
+<body>
+    <!-- Display the page title as an H1 heading -->
+    <h1><%= pageTitle %></h1>
+    <div class="s-exam-emtenan">
+        <h4 for="examTitle">Exam Title: <%= examTitle%></h4>
+
+        <!-- <label for="examTitle">Exam Title: <%= examTitle || '' %></label> -->
+        <h2>Questions:</h2>
+        <!-- <input type="text" id="examTitle" name="examTitle" value="<%= examTitle || '' %>" required> -->
+            
+                
+    <!-- Exam form -->
+    <form action="/views/ins-home.ejs" method="POST">
+        <!-- Input for exam title -->
+        
+       
+
+        <!-- Questions section -->
+        <ul >
+            <!-- Loop through questions and create form elements for each -->
+
+            <% for(let i = 0; i < questions.length; i++) { %>
+                 
+                    <li >
+                    <div class="question-container"> 
+                    <!-- Input for question text -->
+                    <label  for="question_<%= i %>">Question <%= i  %> :</label>
+                    <input class="Question_input" type="text" id="question_<%= i %>" name="questions[<%= i %>]" value="<%= questions[i] || '' %>" required>
+                    <br>
+                    
+                    <!-- Choices section -->
+                    <label  for="choices_<%= i %>">Choices:</label>
+                    <ul>
+                        <!-- Loop through choices for the current question -->
+                        <% for(let j = 0; j < choices[i].length; j++) { %>
+                            <li>
+                                <!-- Input for choice text -->
+                                <input type="text" id="choices_<%= i %>_<%= j %>" name="choices[<%= i %>][<%= j %>]" value="<%= choices[i][j] || '' %>" required>
+                                <!-- Radio button to designate the correct answer -->
+                                <input type="radio" name="correctAnswers[<%= i %>]" value="<%= j %>" <% if (correctAnswers[i] == j) { %>checked<% } %>> Correct
+                            </li>
+                        <% } %>
+                    </ul>
+                    <!-- Button to add a new choice -->
+                    <button type="button" class="add-choice" data-question="<%= i %>">Add Choice</button>
+                    </div>
+                </li>
+                  
+            <% } %>
+
+        </ul>
+
+        <!-- Button to add a new question -->
+        <button class="addQ-button" type="button" id="add-question">Add Question</button>
+        <!-- Button to submit the form and save the exam -->
+        <button class="save-button" type="submit">Save</button>
+    </div>
+
+    </form>
+
+
+    <!-- JavaScript code -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const addQuestionButton = document.getElementById("add-question");
+
+  addQuestionButton.addEventListener("click", function () {
+    const questionList = document.querySelector("ul");
+    const questionItem = document.createElement("li");
+    const questionNumber = questionList.children.length;
+
+    questionItem.innerHTML = `
+      <div class="question-container">
+        <label for="question_${questionNumber}">Question ${questionNumber + 1}:</label>
+        <input class="Question_input" type="text" id="question_${questionNumber}" name="questions[${questionNumber}]" required>
+        <br>
+        <label for="choices_${questionNumber}">Choices:</label>
+        <ul></ul>
+        <button type="button" class="add-choice" data-question="${questionNumber}">Add Choice</button>
+      </div>
+    `;
+
+    // Add a class to the new question container to apply a border
+    questionItem.querySelector(".question-container").classList.add("bordered");
+
+    // Create initial choice for the first question
+    const choiceList = questionItem.querySelector("ul");
+    const choiceItem = document.createElement("li");
+    choiceItem.innerHTML = `
+      <input type="text" id="choices_${questionNumber}_0" name="choices[${questionNumber}][0]" required>
+      <input type="radio" name="correctAnswers[${questionNumber}]" value="0"> Correct
+    `;
+    choiceList.appendChild(choiceItem);
+
+    questionList.appendChild(questionItem);
+
+    const addChoiceButtons = document.querySelectorAll(".add-choice");
+
+    addChoiceButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const questionIndex = button.getAttribute("data-question");
+        const choiceList = questionList.children[questionIndex].querySelector("ul");
+        const choiceItem = document.createElement("li");
+        const choiceNumber = choiceList.children.length;
+        choiceItem.innerHTML = `
+          <input type="text" id="choices_${questionIndex}_${choiceNumber}" name="choices[${questionIndex}][${choiceNumber}]" required>
+          <input type="radio" name="correctAnswers[${questionIndex}]" value="${choiceNumber}"> Correct
+        `;
+        choiceList.appendChild(choiceItem);
+      });
+    });
+  });
+});
+
+
+
+    </script>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "ba61ac50-b209-44b3-a58c-8a1f27f96afb", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "0f987110-4a4b-45e3-b66a-441d97354c96", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="/styles/ins-home-global.css" />
+  <link rel="stylesheet" href="/styles/ins-home.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="icon" href="./images/favicon.ico">
+
+</head>
+<style>
+  .container{
+    margin-top: 3rem;
+    margin-left: 15rem;
+  }
+  td{
+    padding:.8rem ;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.433);
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 63%;
+  }
+  .selectInput{
+    width: 20rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+  }
+  .formBtn{
+    padding: 1rem .8rem;
+    border-radius: .8rem;
+    color: white;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #6761ac;
+    margin-top: 1rem;
+
+
+  }
+  .editBtn{
+    padding: .3rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    background-color: #6761ac;
+    color: white;
+    text-decoration: none;
+  }
+  .end{
+    display: flex;
+    margin:3rem;
+    justify-content: end;
+    align-items: end;
+    
+  }
+  
+</style>
+
+</head>
+
+<body>
+  <div class="sidebar" id="mySidebar">
+    <button class="openbtn icon" onclick="myFunction() ">&#9776;</button>
+    <b class="watheeq">Watheeq</b>
+    <img class="watheeq-logo-icon" alt="" src="/images/watheeq-icon.png" />
+
+    <div class="nav-bttn">
+      <a class="create-test" id="createTestText"><span class="material-symbols-outlined">
+          edit_square
+        </span>create test</a>
+      <!-- <img class="group-icon" alt="" src="./public/create-test-icon.png" /> -->
+    </div>
+
+    <div class="nav-bttn">
+      <a class="announcement" id="announcementText"><span class="material-symbols-outlined">
+          rule
+        </span>Announcement</a>
+      <!-- <img class="icon-task-square" alt="" src="./public/grades-icon.png" /> -->
+    </div>
+
+    <div class="blc-chain">
+      <a class="grades3" href="https://view-result.vercel.app/" >
+        <img class="block" src="/images/blockchain.png" />
+        Grades in Blockchain
+      </a>
+    </div>
+
+    <div class="nav-bttn">
+      <a class="log-out" href="/logout"><span class="material-symbols-outlined">
+          logout
+        </span>Log out</a>
+      <!-- <img class="icon-logout" src="./public/logout-icon.png" alt=""> -->
+    </div>
+  </div>
+
+  <!-- <div class="main" id="myMain">
+
+    <div class="ins-page">
+    <div class="test">Test</div>
+    <div class="course">Course</div>
+    <div class="course-rec"></div>
+    <div class="test-rec"></div>
+    <div class="status">Status</div>
+    <div class="status-rec"></div>
+  </div>
+  </div> -->
+
+<div class="container">
+  <div class="end">
+    <a  href="/export-excel" class="editBtn">Export All Exams</a>
+  </div>
+
+  <table style="width: 100%;">
+    <thead>
+      <th>Exam Name </th>
+      <th>Exam Dated</th>
+      <th>Exam AccessCode </th>
+      <th>Exam Status </th>
+      <th>Actions </th>
+    </thead>
+    <tbody style="text-align: center;">
+     <% if(allExams && allExams.length > 0){ %>
+      <% allExams.forEach(exam => { %>
+        <tr>
+          <td><%= exam.title %></td>
+          <td><%= exam.testDate %></td>
+          <td><%= exam.accessCode %></td>
+          <td><%= exam.status %></td>
+          <td>
+            <a href="/editExam/<%= exam._id %>" class="editBtn">Edit</a>
+            <a href="/export_exam/<%= exam._id %>" class="editBtn" style="background-color: rgb(7, 81, 7);">Export</a>
+          </td>
+        </tr>
+        
+    <%  }) %>
+      <%}%>
+    </tbody>
+  </table>
+</div>
+
+
+
+  <div id="testpageContainer" class="popup-overlay" style="display: none">
+    <div class="testpage">
+      <form action="/create-exam" method="post">
+        <b class="create-test1">Create test</b>
+
+        <label class="test-name1">Test name:</label>
+        <input required name="examTitle" class="testname-textbox1" type="text" />
+
+        <label class="test-duration">Test duration:</label>
+        <input class="start-time-box" name="startingTime" type="time" required />
+        <input class="end-time-box" name="endingTime" type="time" required />
+
+        <label class="test-grade">Test grade:</label>
+        <input class="testgrade-box" type="number" name="grade" required />
+
+        <label class="description">Description:</label>
+        <input class="disc-textbox" type="text" name="description" />
+
+        <label class="test-date">Test date:</label>
+        <input class="testdate-box" type="date" name="testDate" />
+        <input class="" type="hidden" value="<%= user._id %>" name="instructorId" required />
+
+
+        <label class="randomize-questions">Randomize questions</label>
+        <input class="randomq-checkbox" type="checkbox" name="randomizeQuestions" />
+
+        <!-- <label class="randomize-answers">Randomize answers</b>
+          <input class="randoma-checkbox" type="checkbox" /> -->
+
+
+          <button type="submit" class="next next-button-ui">Next</button>
+
+
+      </form>
+    </div>
+  </div>
+
+  <% if (form===1) { %>
+    <div id="questionpageContainer" class="popup-overlay"
+      style="display: flex ; align-items: center;  justify-content: center;">
+
+      <% }else { %>
+        <div id="questionpageContainer" class="popup-overlay" style="display: none">
+          <%}%>
+
+            <div class="questionpage">
+              <form action="/addQuestions" method="post">
+
+                <b class="question-text">Question text:</b>
+                <b class="answers">Answers:</b>
+                <b class="question-grade">Question grade:</b>
+                <input class="qtext-textbox" name="question" type="text" placeholder="Enter Your Question !!"
+                  style="padding: 3px 10px;" />
+
+                <input class="qgrade" name="grade" type="number" placeholder="0" style="padding: 4px 10px;" />
+                <input type="hidden" value="<%= examId%>" name="examId">
+
+                <input class="a1chekckbox" type="radio" name="correctAnswerIndex" defaultchecked="{true}" value="0" />
+                <input class="a2chekckbox" type="radio" name="correctAnswerIndex" value="1" />
+                <input class="a3checkbox" type="radio" name="correctAnswerIndex" value="2" />
+                <input class="a4chekckbox" type="radio" name="correctAnswerIndex" value="3" />
+
+                <input class="a1text" type="text" style="padding: 3px 10px;" name="option1" placeholder="Option 1" />
+
+                <input class="a2text" type="text" style="padding: 3px 10px;" name="option2" placeholder="Option 2" />
+
+                <input class="a3text" type="text" style="padding: 3px 10px;" name="option3" placeholder="Option 3" />
+
+                <input class="a4text" type="text" style="padding: 3px 10px;" name="option4" placeholder="Option 4" />
+
+
+                <button class="nextbutton" type="submit">
+                  <b class="next1">Save</b>
+                </button>
+                <a class="savebutton" href="/instructor">
+                  <b class="next1" style="color: white; text-decoration: none;">Close</b>
+                </a>
+
+              </form>
+            </div>
+        </div>
+
+        <div id="annouencementpageContainer" class="popup-overlay" style="display: none">
+          <div class="annouencementpage">
+            <!-- <b class="test-name">Test name:</b>
+            <b class="post-an-announcement">Post an announcement</b>
+            <b class="date">Date:</b>
+            <div class="completed">Completed</div>
+            <div class="upcoming">Upcoming</div>
+            <input class="completed-checkbox" type="checkbox" />
+
+            <input class="upcoming-checkbox" required="{false}" type="checkbox" />
+
+            <input class="testname-textbox" name="test-name" type="text" />
+
+            <input class="date-box" type="datetime-local" />
+
+            <button class="post" autofocus="{true}" disabled="{false}"> Post </button>
+
+            </button> -->
+            <div class="form">
+              <p class="title">Post An Announcement</p>
+              <form method="post" action="/makeAnnounment" style="display: flex;flex-direction: column;">
+                <select name="examTitle" class="selectInput" id="">
+                  <option value="">Select Your Test </option>
+                  <% if(allExams && allExams.length > 0){ %>
+                    <% allExams.forEach(exam => { %>
+                      <option value=""><%= exam.title %> </option>
+                  <%  }) %>
+                    <%}%>
+                </select>
+                <button type="submit" class="formBtn">Post Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <script src="./scripts/ins-home.js"></script>
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "ba61ac50-b209-44b3-a58c-8a1f27f96afb", // The ID of this integration.
+            region: "eu-de", // The region your integration is hosted in.
+            serviceInstanceID: "0f987110-4a4b-45e3-b66a-441d97354c96", // The ID of your service instance.
+            onLoad: async (instance) => { await instance.render(); }
+          };
+          setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+
+</body>
+
+</html>

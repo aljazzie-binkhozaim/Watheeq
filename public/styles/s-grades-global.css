@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  line-height: normal;
+  font-size: 16px; /* Set a base font size */
+}
+
+:root {
+  /* fonts */
+  --font-catamaran: Catamaran;
+  --font-noto-sans: "Noto Sans";
+  --font-outfit: Outfit;
+
+  /* font sizes */
+  --font-size-xl: 1.25rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-thistle: #c5c1ed;
+  --color-darkslateblue-100: #54508a;
+  --color-black: #000;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+}
+h1 {
+  font-size: 2rem; /* Example: 2 times the root font size */
+}
+
+p {
+  font-size: 1.2em; /* Example: 1.2 times the parent element's font size */
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust the base font size for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Adjust heading font size for smaller screens */
+  }
+
+  /* Add more rules as needed for different elements */
+}
+
+

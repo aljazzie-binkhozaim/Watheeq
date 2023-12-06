@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width ,initial-scale=1 " />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400&display=swap" />
+
+  <link rel="icon" href="./images/favicon.ico">
+
+  <title><%= pageTitle %></title>
+
+  <style>
+    .navbar-brand {
+      font-size: 2.5vw;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .footerr {
+      background-color: rgb(49 75 121);
+    width: 100%;
+    position: absolute;
+    height: 14rem;
+    align-items: center;
+    bottom: 0rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem !important;
+    }
+    .right ul{
+      display: flex;
+      flex-direction: column;
+    }
+    .right ul li{
+      list-style: none;
+    }
+    .right ul li a{
+
+      text-decoration: none;
+      color: white;
+    }
+    .left{
+      display: flex;
+      gap: 5px;
+      width: 40%;
+      flex-direction: column;
+    }
+    .middle{
+      flex-direction: column;
+      width: 30%;
+      display: flex;
+    }
+    .right{
+      width: 10%;
+    }
+    .icons{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  </style>
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <div class="homePage"><!--class="desktop-1"-->
+    <!-- ------------------Navigation bar--------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scroll  shadow-5-strong  .navbar-custom">
+      <div class="container-fluid ">
+        <a class="navbar-brand watheeq" href="#">Watheeq</a>
+        <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <div class=" ms-auto ">
+            <ul class="navbar-nav">
+              <li class="nav-item mr-5">
+
+
+                <a class="nav-link active " aria-current="page" href="#home-sec">Home</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link " href="#about-sec">About</a>
+              </li>
+              <li class="nav-item mr-2">
+                <a class="nav-link " href="#contact-sec">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- --------------------------------------- -->
+
+    <img class="backgraund-icon1" alt="" src="./images/up&right.png" />
+
+    <img class="backgraund-icon2" alt="" src="./images/left&right.png" />
+
+
+
+    <div class="contain">
+      <div id="home-sec" class="text-rel">
+        <h1 class="reliable-and-secure item">Reliable and secure experience</h1>
+      </div>
+      <div class="top-img item">
+        <img class="objectother-07-icon" alt="" src="./images/pc.png" />
+        <img class="watheeq-logo-1-icon" alt="" src="./images/gplogo.jpg" />
+      </div>
+
+      <!-- <div class="the-most-secure-container item">
+        <p class="the-most-secure">The most secure marketplace for buying</p>
+        <p class="the-most-secure">and selling unique crypto assets.</p>
+      </div> -->
+      <div class="home-bttn">
+        <div class="item " id="ins">
+          <button class="ins-bttn " id="rectangle1">instructor</button>
+        </div>
+        <!-- <div class="desktop-1-child" id="rectangle"></div> -->
+
+        <!-- <div class="desktop-1-item" id="rectangle1"></div> -->
+        <div class="item" id="">
+          <button class="st-bttn" id="studentText">Student</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panner">
+      <div id="about-sec" class="panner-text">
+        <h2 class="watheeq3">watheeq </h2>
+        <h3 class="dear-students-keep">
+          Dear students; keep track of your exams & assignments and keep them
+          save & secure from any changes With complete confidence.</h3>
+      </div>
+      <img src="./images/girl-boy.png" alt="" class="panner-item">
+    </div>
+
+    <div class="about-dark">
+      <div class="about-text">
+        <h2 class="what-is-watheeq">what is watheeq</h2>
+        <h3 class="a-blockchain-base">a blockchain based website</h3>
+        <p class="our-watheeq-website">
+          Our watheeq website is the strongest way to keep track of your exams &
+          assignments; by keeping them save & secure from any changes With
+          complete confidence.
+        </p>
+      </div>
+
+      <img class="image-17-icon" alt="" src="./images/geometry.png" />
+    </div>
+
+
+
+    <div class="our-names">
+      <!-- <b class="testimonials">testimonials</b>
+        <b class="read-what-others-have-container">
+          <p class="the-most-secure">read what others</p>
+          <p class="the-most-secure">have to say</p>
+        </b> -->
+      <b id="meet-team">meet the team!</b>
+      <hr>
+
+      <div class="team">
+
+        <div class="member">
+          <p class="emtenan-bin-sunaid">Emtenan bin sunaid</p>
+          <p class="the-most-secure">King saud university</p>
+          <p class="the-most-secure">Computer science</p>
+        </div>
+
+        <div class="member">
+          <p class="aljazzie-bin-khozaim">Aljazzie Bin Khozaim</p>
+          <p class="the-most-secure">King saud university</p>
+          <p class="the-most-secure">Computer science</p>
+        </div>
+
+        <div class="member">
+          <p class="reema-alolayan">reema alolaian</p>
+          <p class="the-most-secure">King saud university</p>
+          <p class="the-most-secure">Computer science</p>
+
+        </div>
+
+        <div class="member">
+          <p class="reema-abukhalil">Reema Abukhalil</p>
+          <p class="the-most-secure">King saud university</p>
+          <p class="the-most-secure">Computer science</p>
+
+        </div>
+
+        <div class="member">
+          <p class="fahda-alqahtani">Fahda Alqahtani</p>
+          <p class="the-most-secure">King saud university</p>
+          <p class="the-most-secure">Computer science</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="About-emtenan">
+        
+        </div>
+
+        <div class="About-Aljazzie">
+          
+        <div class="About-ReemaAlolayan">
+          
+        </div>
+        <div class="About-ReemaAbu">
+          
+        </div>
+        <div class="About-fahda">
+          
+        </div>
+      </div> -->
+
+    <!-- <div class="desktop-1-child1"></div>
+      <div class="home-about">
+        <p class="the-most-secure">Home</p>
+        <p class="the-most-secure">About</p>
+      </div> -->
+
+    <!-- <div class="email-linkedin-instagram-container">
+        <p class="the-most-secure">Email</p>
+        <p class="the-most-secure">LinkedIn</p>
+        <p class="the-most-secure">Instagram</p>
+        <p class="the-most-secure">Twitter</p>
+      </div> -->
+
+    <!-- <footer class="footer">
+      <div class="logo-footer">
+        <img class="img-footer" src="./images/gplogo.jpg" alt="">
+      </div>
+      <b id="contact-sec" class="contact1">contact</b>
+
+      <img class="image-11-icon" alt="" src="./images/ksu.png" />
+
+    </footer> -->
+
+
+      <footer class="footerr">
+        <div class="left">
+          <b style="font-size: 1.4rem;">WATHEEQ</b>
+          <p> Watheeq is a website that provides secure and tamper-proof online assessments for blockchain education.</p>
+          <div class="icons">
+            <img width="48" height="48" src="https://img.icons8.com/color/48/blockchain.png" alt="blockchain"/>
+            <img width="48" height="48" src="https://img.icons8.com/color/48/bitcoin--v1.png" alt="bitcoin--v1"/>
+            <img width="48" height="48" src="https://img.icons8.com/fluency/48/ethereum.png" alt="ethereum"/>
+          </div>
+        </div>
+        <div class="middle">
+          <p><strong> ReachUs</strong></p>
+         <span>ContactUs : +00 000 000</span>
+         <span>Email : Watheeq@hotmail.com</span>
+         <div class="icons" style="margin-top: 1rem;">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="github"/>      
+          <img width="48" height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook"/>
+          <img width="48" height="48" src="https://img.icons8.com/color/48/slack.png" alt="slack"/>
+        
+        </div>
+
+
+        </div>
+        <div class="right">
+          <p><strong>important links</strong></p>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+
+
+  </div>
+
+
+
+  <!--student pop up  -->
+  <div id="sSignInContainer" class="popup-overlay" style="display: none">
+
+    <div class="s-signin">
+
+      <form action="/studentLogin" method="post">
+        <label for="email" class="e-mail1">e-mail</label>
+        <input type="text" name="email" required class="ins-signin-child">
+        <label for="password" class="password1">password</label>
+        <input type="password" name="password" required class="ins-signin-item">
+        <!-- <b class="sign-in1">sign in </b> -->
+        <input type="submit" value="Sign in" class="ins-signin-inner" id="popuprectangle2">
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--instructor pop up  -->
+
+  <div id="insSignInContainer" class="popup-overlay" style="display: none">
+    <div class="ins-signin">
+      <form action="/instructor" method="post">
+        <label class="e-mail1">e-mail</label>
+        <input type="text" name="email" required class="ins-signin-child">
+        <label class="password1">password</label>
+        <input type="password" name="password" required class="ins-signin-item">
+        <!-- <b class="sign-in1">sign in </b> -->
+        <input type="submit" value="Sign in" class="ins-signin-inner" id="popuprectangle2">
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="./scripts/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "ba61ac50-b209-44b3-a58c-8a1f27f96afb", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "0f987110-4a4b-45e3-b66a-441d97354c96", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+</body>
+
+</html>

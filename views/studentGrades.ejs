@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./styles/s-grades-global.css" />
+  <link rel="stylesheet" href="./styles/s-grades.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <link rel="icon" href="./images/favicon.ico">
+
+  <style>
+    .cardsContainer {
+      height: 11rem;
+      width: 90%;
+      position: absolute;
+      top: 30%;
+      left: 18%;
+    }
+
+    .card {
+      background-color: #c5c1ed;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      border-radius: .8rem;
+      position: relative;
+      font-size: .8rem;
+      margin-bottom: .4rem;
+      padding: .3rem 2rem;
+      justify-content: space-between;
+    }
+
+    .cardGrades {
+      background-color: #6761ac;
+      padding: .2rem .8rem;
+      border-radius: .5rem;
+      color: white;
+    }
+    .btnStart{
+      background-color: #6761ac;
+      padding: .4rem 3rem;
+      border: none;
+      outline: none;
+      border-radius: .5rem;
+      margin-top: 9rem;
+      color: white;
+    }
+  </style>
+    
+</head>
+
+</head>
+
+<body>
+  <div class="sidebar" id="mySidebar">
+    <button class="openbtn icon" onclick="myFunction() ">&#9776;</button>
+    <a href="/student"><b class="watheeq">Watheeq</b></a>
+    <img class="watheeq-logo-icon" alt="" src="./images/watheeq-icon.png" />
+
+    <div class="nav-bttn">
+      <a class="take-test" id="takeTest"><span class="material-symbols-outlined">
+          edit_square
+        </span>Take test</a>
+      <!-- <img class="group-icon" alt="" src="./public/create-test-icon.png" /> -->
+    </div>
+
+    <div class="nav-bttn">
+      <a class="grades2" href="/studentGrades"><span class="material-symbols-outlined">
+          rule
+        </span>Grades</a>
+      <!-- <img class="icon-task-square" alt="" src="./public/grades-icon.png" /> -->
+    </div>
+
+    <div class="nav-bttn">
+      <a class="grades3" href="https://view-result.vercel.app/" target="_blank"><span class="material-symbols-outlined">
+          rule
+        </span>Grades Blockchain</a>
+      <!-- <img class="icon-task-square" alt="" src="./public/grades-icon.png" /> -->
+    </div>
+    
+    <div class="nav-bttn">
+      <a class="log-out" href="/logout"><span class="material-symbols-outlined">
+          logout
+        </span>Log out</a>
+      <!-- <img class="icon-logout" src="./public/logout-icon.png" alt=""> -->
+    </div>
+  </div>
+
+
+
+
+  <div class="main" id="myMain">
+    <div class="s-greades-emtenan">
+      <b class="my-announcement">My Grades </b>
+      
+      <div class="frames">
+        <!-- <div class="frame">
+          <div class="quiz-1"> Quiz 1 </div>
+          <div class="csc111-programing">CSC111 - Programing</div>
+          <div class="frame1">
+            <a class="a">22.5</a>
+          </div>
+        </div> -->
+        <div class="frame2">
+          <b class="test">Test</b>
+        </div>
+        <div class="frame3">
+          <b class="course">Dated</b>
+        </div>
+        <div class="frame4">
+          <b class="grades">Grades</b>
+        </div>
+        <div class="cardsContainer">
+          <% if(grades && grades.length> 0){ %>
+            <% grades.forEach(grade=>{ %>
+
+              <div class="card">
+                <p>
+                  <%= grade.examTitle %>
+                </p>
+                <p>
+                  <%= grade.examDate %>
+                </p>
+                <p class="cardGrades">
+                  <%= grade.totalGrades %>
+                </p>
+              </div>
+              <% }) %>
+                <%}else{%>
+                  <div class="card">
+                    <p style="text-align: center;">No Grades Yet !!!</p>
+                  </div>
+                  <%}%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="testCodePopup" class="popup-overlay" style="display: none">
+    <div class="testcode">
+      <span class="material-symbols-outlined close-bttn" id="close">
+        close
+      </span>
+     <div class="flex">
+      <label class="enter-test-code">enter test code</label>
+
+      <form action="/enterTest" method="post">
+        <input required type="text" class="testcode-child" name="accessCode" placeholder="Enter Your Test AccessCode ..." style="padding: .4rem .8rem;">
+        <br><br>
+        <button type="submit" class="btnStart" >start</button>
+      </form>
+     </div>
+      
+    </div>
+  </div>
+  
+  <!-- <div id="testCodePopup" class="popup-overlay" style="display: none">
+    <div class="testcode">
+      <form action="/enterTest" method="post">
+        <label class="enter-test-code">enter test code</label>
+        <input required type="text" class="testcode-child" name="accessCode" placeholder="Enter Your Test AccessCode ..." style="padding: .4rem .8rem;">
+        <br><br>
+        <button type="submit" class="btnStart" >start</button>
+      </form>
+    </div>
+  </div> -->
+
+  <script src="./scripts/s-grades.js"></script>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "ba61ac50-b209-44b3-a58c-8a1f27f96afb", // The ID of this integration.
+      region: "eu-de", // The region your integration is hosted in.
+      serviceInstanceID: "0f987110-4a4b-45e3-b66a-441d97354c96", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+
+</html>

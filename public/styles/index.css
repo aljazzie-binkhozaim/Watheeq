@@ -1,0 +1,2029 @@
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+  font-size: large;
+  
+}
+
+.contain{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.item{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.st-bttn{
+  position: absolute;
+  height: 1.4%;
+  width: 11%;
+  min-width: 15%;
+  top: 11%;
+  left: 11%;
+  font-size: 20px;
+  border-radius: var(--br-31xl);
+  border: 3px solid #9192dd;
+  box-sizing: border-box;
+  background-color: #9192dd;
+  z-index: 100;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+.st-bttn:hover{
+  box-shadow: 0 0 20px #6b68a9;
+}
+
+.ins-bttn{
+  position: absolute;
+  height: 1.4%;
+  width: 10%;
+  min-width: 15%;
+  top: 11%;
+  left: 32%;
+  font-size: 20px;
+  border-radius: var(--br-31xl);
+  border: 3px solid #88d0d1;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: white;
+  z-index: 100;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.ins-bttn:hover{
+  background-color: #88d0d1;
+  box-shadow: 0 0 20px #6b68a9;
+}
+/* --------------------------------- */
+.home,
+.contact,
+.about,
+.watheeq {
+  color: aliceblue;
+  position: absolute;
+  height: 100%;
+  top: 10px;
+  line-height: 1.72rem;
+  display: inline-block;
+  /* font-size: 1.4vw; */
+  font-size: 10pt;
+}
+
+.home,.about,.contact{
+  justify-content: flex-end;
+}
+
+.watheeq {
+  width: 10%;
+  left: 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+.home{
+  left: 800px;
+}
+.about{
+  left: 900px;
+}
+.contact{
+  left: 1000px;
+}
+
+
+.navigation {
+  position: absolute;
+  height: 0.76%;
+  width: 60.61%;
+  top: 1.67%;
+  right: 17.7%;
+  bottom: 97.57%;
+  left: 21.7%;
+  font-size: 1vw;
+}
+
+
+.backgraund-icon2 {
+  position: absolute;
+  height: 25%;
+  width: 100%;
+  top: 37.5%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.backgraund-icon1 {
+  position: absolute;
+  height: 23%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  object-fit: cover;
+}
+.instructor {
+  position: absolute;
+  height: 4.91%;
+  width: 43.1%;
+  top: 82.01%;
+  left: -101.51%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.5vw;
+}
+
+
+.homePage {
+  position: relative;
+  background-color: #010237;
+  width: 100%;
+  height: 273.44rem;
+  overflow: hidden;
+  text-align: left;
+  font-size: 1vw;
+  color: var(--color-white);
+  font-family: var(--h1);
+}
+
+
+.watheeq-logo-1-icon {
+  position: absolute;
+    height: 160px;
+    width: 160px;
+    top: 4%;
+    right: 9.03%;
+    bottom: 89.44%;
+    left: 80%;
+    border-radius: 5%;
+
+}
+
+
+
+
+
+
+.desktop-1-child,
+.desktop-1-item {
+  position: absolute;
+  bottom: 82.05%;
+  border-radius: var(--br-31xl);
+}
+.desktop-1-child {
+  height: 1.71%;
+  width: 16.79%;
+  top: 16.23%;
+  right: 66.48%;
+  left: 16.73%;
+  background-color: #9192dd;
+  mix-blend-mode: normal;
+}
+.desktop-1-item {
+  height: 1.65%;
+  width: 16.73%;
+  top: 16.3%;
+  right: 48.18%;
+  left: 35.09%;
+  border: 3px solid #88d0d1;
+  box-sizing: border-box;
+}
+.student {
+  position: absolute;
+  height: 0.71%;
+  width: 8.61%;
+  top: 16.78%;
+  left: 20.79%;
+  font-size: 1.5vw;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*  first section start*/
+
+
+.reliable-and-secure {
+  position: absolute;
+  height: 6.68%;
+  width: 55%;
+  top: 4%;
+  left: 2%;
+  font-size: 63px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline-block;
+  mix-blend-mode: normal;
+}
+
+.the-most-secure-container {
+  position: absolute;
+  height: 1.41%;
+  width: 25.82%;
+  top: 13.29%;
+  left: 18.18%;
+  margin: 0;
+  font-size: 1.5vw;
+  line-height: 1.72rem;
+  font-family: var(--body);
+  display: inline-block;
+}
+
+
+.objectother-07-icon {
+  position: absolute;
+  height: 380px;
+  width: 390px;
+  top: 4%;
+  right: 14%;
+  bottom: 82.24%;
+  left: 64%;
+  mix-blend-mode: normal;
+
+}
+
+
+.objectother-07 {
+  position: absolute;
+  height: 12.58%;
+  width: 26.86%;
+  top: 6.51%;
+  right: 7.88%;
+  bottom: 80.91%;
+  left: 65.26%;
+  font-size: 1vw
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* student sign in pop up start*/
+
+.s-signin-child{
+  position: absolute;
+  right: 24.24%;
+  top: 32.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 51.41%;
+  height: 12.03%;
+
+
+}
+.s-signin-item {
+  position: absolute;
+  right: 24.24%;
+  top: 45.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 51.41%;
+  height: 12.03%;
+}
+
+
+.s-signin-item {
+  top: 18.13rem;
+}
+
+
+
+
+.e-mail{
+  position: absolute;
+  top: 8rem;
+  font-size: 1.5vw;
+  left: -5%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 3.88rem;
+}
+
+
+
+
+
+.password {
+  position: absolute;
+  font-size: 1.5vw;
+  top: 16rem;
+  left: -2%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 1.38rem;
+}
+
+
+
+
+.s-signin-inner,
+.sign-in {
+  position: absolute;
+  mix-blend-mode: normal;
+}
+.sign-in {
+  width: 70%;
+  height: 3.88rem;
+  top: 2rem;
+  left: 14%;
+  font-size: 1.5vw;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  display: inline-block;
+
+
+}
+.s-signin-inner {
+color: white;
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    min-width: 13%;
+    top: 78%;
+    left: 33%;
+    font-size: 19px;
+    border-radius: 12px;
+    border: 3px solid #9192dd;
+    box-sizing: border-box;
+    background-color: #9192dd;
+    z-index: 100;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+ .s-signin-inner:hover {
+    box-shadow: 0 0 20px #6b68a9;
+}
+.next {
+position: absolute;
+    width: 70%;
+    height: 3.88rem;
+    top: 3rem;
+    left: 14%;
+    font-size: 2.5vw;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.s-signin {
+  position: relative;
+  border-radius: var(--br-xl);
+  background: linear-gradient(183.64deg, #332c66, #76a0be 81.29%, #86bbd3);  backdrop-filter: blur(4px);
+  width: 53.13rem;
+  height: 31.69rem;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  font-size: 1vw;
+  color: var(--color-white);
+  font-family: var(--h1);
+}
+
+
+
+/* student sign in pop up end */
+
+
+
+
+
+
+/* ins sign in pop up start*/
+
+
+
+.ins-signin-child{
+  position: absolute;
+  right: 24.24%;
+  top: 32.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 51.41%;
+  height: 12.03%;
+
+
+}
+
+.ins-signin-item {
+  position: absolute;
+  right: 24.24%;
+  top: 45.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 51.41%;
+  height: 12.03%;
+}
+.ins-signin-item {
+  top: 18.13rem;
+}
+.e-mail1{
+  position: absolute;
+  top: 8rem;
+  font-size: 1.5vw;
+  left: -5%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 3.88rem;
+}
+
+
+.password1 {
+  position: absolute;
+  font-size: 1.5vw;
+  top: 16rem;
+  left: -2%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 1.38rem;
+}
+
+.ins-signin-inner,
+.sign-in1 {
+position: absolute;
+    width: 70%;
+    height: 3.88rem;
+    top: 3rem;
+    left: 14%;
+    font-size: 2.5vw;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.ins-signin-inner {
+color: white;
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    min-width: 13%;
+    top: 78%;
+    left: 33%;
+    font-size: 19px;
+    border-radius: 12px;
+    border: 3px solid #9192dd;
+    box-sizing: border-box;
+    background-color: #9192dd;
+    z-index: 100;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+ .ins-signin-inner:hover {
+    box-shadow: 0 0 20px #6b68a9;
+}
+.next1 {
+  position: absolute;
+  width: 70%;
+  height: 3.88rem;
+  top: 26.5rem;
+  left: 14%;
+  font-size: 1.5vw;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.ins-signin {
+  position: relative;
+  border-radius: var(--br-xl);
+  background: linear-gradient(183.64deg, #332c66, #76a0be 81.29%, #86bbd3);  backdrop-filter: blur(4px);
+  width: 53.13rem;
+  height: 31.69rem;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  font-size: 1vw;
+  color: var(--color-white);
+  font-family: var(--h1);
+}
+/* ins sign in pop up end */
+
+
+
+
+
+/*  first section End*/
+
+div .s-signin,.ins-signin{
+  animation: 1s popup-overlay;
+  margin-bottom: 0%;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@keyframes popup-overlay{
+  from{
+    margin-top:100%;
+    height: 300%;
+  }
+  to{
+    margin-top:0%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  second section start*/
+
+
+.panner-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.watheeq3 {
+  position: absolute;
+  display: inline-block;
+
+  height: 9.06%;
+  width: 12.42%;
+  top: 30%;
+  left:5%;
+  font-size: 2.5vw;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+}
+
+.dear-students-keep{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  top: 40%;
+  left: 5%;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  font-size:2.5vw;
+
+}
+
+
+/* images in the second section */
+.panner-item {
+  position: absolute;
+  height: 60%;
+  width: 40%;
+  top: 21%;
+  right: 7.47%;
+  bottom: 16.88%;
+  left: 54.91%;
+  mix-blend-mode: normal;
+  }
+
+/* Boy image 12*/
+/* .image-12-icon{
+  position: absolute;
+  height: 69.53%;
+  width: 17.66%;
+  top: 10%;
+  right: 22.18%;
+  bottom: 20.47%;
+  left: 60.16%;
+  mix-blend-mode: normal;
+} */
+
+/* laptop image 13*/
+/* .image-13-icon{
+  position: absolute;
+  height: 27.83%;
+  width: 10.02%;
+  top: 14.22%;
+  right: 18.01%;
+  bottom: 57.95%;
+  left: 71.97%;
+} */
+
+
+/* girl image 15*/
+/* .image-15-icon{
+  position: absolute;
+  height: 78.28%;
+  width: 17.66%;
+  top: 1.25%;
+  right: 5.36%;
+  bottom: 20.47%;
+  left: 76.97%;
+
+} */
+
+/* phone image 16*/
+/* .image-16-icon {
+  position: absolute;
+  height: 22.66%;
+  width: 8.2%;
+  top: 24.84%;
+  right: 36.89%;
+  bottom: 52.5%;
+  left: 54.91%;
+ 
+} */
+
+
+
+/* images in the second section END */
+
+.panner {
+  position: absolute;
+  height: 14.63%;
+  width: 100.55%;
+  top: 23.25%;
+  right: -0.55%;
+  bottom: 62.13%;
+  left: 0;
+  font-size: 1vw;
+  background: linear-gradient(265.41deg, #9192dd, #86bbd3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+}
+
+/* second section END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  third section start*/
+
+.about-dark{
+  position: absolute;
+  top: 38%;
+  height: 16%;
+  width: 100%;
+  display: block;
+}
+
+.about-text{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  
+}
+
+.what-is-watheeq {
+  position: absolute;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: center;
+  font-size: 350%;
+  height: 0.94%;
+  width: 40%;
+  top: 45%;
+  left: 49.58%;
+  margin: 30px;
+}
+
+.a-blockchain-base {
+  position: absolute;
+  left: 49.58%;
+  display: inline-block;
+  height: 1.87%;
+  width: 34.48%;
+  top: 58%;
+  font-size: 1.4vw;
+  line-height: 100%;
+  text-transform: capitalize;
+  mix-blend-mode: normal;
+  margin: 30px;
+  padding: 20px 0px;
+
+}
+
+
+.our-watheeq-website {
+  position: absolute;
+  left: 49.58%;
+  display: inline-block;
+  height: 2.97%;
+  width: 34.36%;
+  top: 70%;
+  font-size: 1.4vw;
+  letter-spacing: -0.02em;
+  margin: 30px;
+  padding: 20px 0px;
+}
+
+.image-17-icon {
+  position: absolute;
+    height: 50%;
+    width: 30%;
+    top: 20%;
+    /* right: 56.36%; */
+    /* bottom: 39.89%; */
+    left: 10%;
+    z-index: 10;
+  
+}
+
+
+
+/*  third section END*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  fourth section start*/
+
+/* .testimonials{
+  position: absolute;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  font-size: 1.6vw;
+  width: 10.05%;
+  left: 38.17%;
+  color: #aad9d9;
+  text-align: center;
+}
+
+
+
+.read-what-others-have-container {
+  position: absolute;
+  width: 26.15%;
+  top: 13.77%;
+  left: 33.12%;
+  font-size: 1.1vw;
+  line-height: 100%;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+} */
+
+
+
+
+.our-names {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  top: 60%;
+  
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center; */
+  
+  min-height: 100vh;
+  /* background: linear-gradient(265.41deg, #9192dd, #86bbd3);  */
+  /* border-radius: 10px;
+  box-shadow: 14px 14px 15px 15px rgba(0, 0, 0, 0.25); */
+  text-align: center;
+}
+
+.team {
+  position: absolute;
+  flex: 1;
+  top: -26%;
+  left: 4%;
+}
+
+.member {
+  background-color: rgba(107, 104, 169, 50%);
+  margin: 10px;
+  color: aliceblue;
+  /* margin: 80px; */
+  padding: 20px;
+  /* height: 300px; */
+  border-radius: 15px;
+  text-transform: capitalize;
+  display: inline-block;
+  /* flex-direction: row; */
+  font-size: 1.5vw;
+  /* position: relative; */
+  /* z-index: 100; */
+}
+
+
+hr {
+  position: absolute;
+  top: -30.5%;
+  left: 44.5%;
+  width: 10%;
+  margin: 10px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#meet-team {
+  position: absolute;
+  top: -35%;
+  left: 42%;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vw;
+  text-transform: capitalize;
+}
+
+
+/* .reema-alolayan{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 11.96%;
+  left: 42.56%;
+
+}
+
+
+.aljazzie-bin-khozaim{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.01em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 15.8%;
+  left: 19.48%;
+}
+
+
+
+.reema-abukhalil{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+
+  width: 12.73%;
+  left: 63.27%;
+
+}
+
+.emtenan-bin-sunaid{
+  position: absolute;
+  width: 14.95%;
+  top: 70.36%;
+  left: 0;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+}
+
+.fahda-alqahtani {
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 12.96%;
+  left: 84.89%;
+} */
+
+/* .About-emtenan{
+
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+}
+
+.About-Aljazzie{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 19.63%;
+
+}
+
+.About-ReemaAlolayan{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 42.71%;
+
+}
+
+.About-ReemaAbu{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 63.42%;
+
+
+}
+
+
+.About-fahda{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 85.05%;
+
+} */
+
+
+.watheeq2 {
+  position: absolute;
+  width: 8.73%;
+  top: 91.5%;
+  left: 40.52%;
+  display: inline-block;
+  height: 0.59%;
+  font-family: var(--body);
+  font-size: 1.3vw;
+}
+.contact1{
+  height: 0.59%;
+  font-family: var(--body);
+  font-size: 1.3vw;
+  width: 9.88%;
+  top: 91.59%;
+  left: 51.58%;
+  position: absolute;
+  display: inline-block;
+}
+
+
+.home-about {
+  position: absolute;
+  height: 3.77%;
+  width: 5.33%;
+  top: 92.69%;
+  left: 41.64%;
+  line-height: 1.94rem;
+  font-family: var(--body);
+  display: inline-block;
+}
+
+
+
+
+.email-linkedin-instagram-container{
+  position: absolute;
+  top: 92.69%;
+  line-height: 1.94rem;
+  font-family: var(--body);
+  display: inline-block;
+  height: 3.77%;
+  width: 5.7%;
+  left: 52.4%;
+
+}
+
+ 
+.image-11-icon {
+  position: absolute;
+  height: 16%;
+  width: 16.06%;
+  top: 80.94%;
+  right: 3.27%;
+  bottom: 1.46%;
+  left: 80.67%;
+  border-radius: 26px;
+}
+
+
+
+/*  fourth section END*/
+
+.footer{
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom:27.49%;
+  background: linear-gradient(265.41deg, #9192dd, #86bbd3);
+}
+
+.logo-footer{
+  position: absolute;
+  bottom: 0%;
+}
+
+.img-footer{
+  height: 20%;
+  width: 20%;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+
+
+@media (min-width:320px) and (max-width:900px) {
+
+  /*  first section start*/
+  .text-rel {
+    position: absolute;
+    height: 6.68%;
+    width: 130%;
+    top: 2%;
+    margin-bottom: 10px;
+    font-size: 6vw;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    display: inline-block;
+    mix-blend-mode: normal;
+    left:14%;
+  }
+
+  .top-img{
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    left: 1%;
+    height: 50vw;
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+  .watheeq-logo-1-icon {
+    position: absolute;
+    height: 40%;
+    width: 35%;
+    top: 5.26%;
+    right: 10%;
+    bottom: 89.44%;
+    left: 95%;
+    border-radius: 5%;
+  
+  }
+
+.objectother-07-icon {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  top: 5.71%;
+  right: 14%;
+  left: 54.67%;
+  mix-blend-mode: normal;
+
+
+}
+
+
+.st-bttn{
+position: absolute;
+    height: 1%;
+    width: 50%;
+    min-width: 13%;
+    top: 15%;
+    left: 25%;
+    font-size: 15px;
+    color: aliceblue;
+    border-radius: var(--br-31xl);
+    border: 3px solid #9192dd;
+    box-sizing: border-box;
+    background-color: #9192dd;
+    z-index: 100;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+.st-bttn:hover{
+  box-shadow: 0 0 20px #6b68a9;
+}
+
+.ins-bttn{
+    position: absolute;
+    height: 1%;
+    width: 50%;
+    min-width: 15%;
+    top: 17%;
+    left: 25%;
+    font-size: 15px;
+    border-radius: var(--br-31xl);
+    border: 3px solid #88d0d1;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    z-index: 100;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.ins-bttn:hover{
+  background-color: #88d0d1;
+  box-shadow: 0 0 20px #6b68a9;
+}
+
+.home-bttn{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100vh;
+}
+
+
+/* student sign in pop up start*/
+.s-signin-child{
+  position: absolute;
+  right: 24.24%;
+  top: 40.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 51.41%;
+  height: 8.03%;
+}
+
+.s-signin-item {
+  position: absolute;
+  right: 24.24%;
+  top: 45.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 51.41%;
+  height: 8.03%;
+  top: 60%;
+}
+
+
+
+
+.e-mail{
+  position: absolute;
+  top: 31%;
+  font-size: 13px;
+  left: 0%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 3.88rem;
+}
+
+
+
+
+
+.password {
+  position: absolute;
+  font-size: 13px;
+  top: 52%;
+  left: 4%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 1.38rem;
+}
+
+
+
+
+.s-signin-inner,
+.sign-in {
+  position: absolute;
+  mix-blend-mode: normal;
+  width: 70%;
+  height: 3.88rem;
+  top: 4rem;
+  left: 14%;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.s-signin-inner {
+color: white;
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    min-width: 13%;
+    top: 78%;
+    left: 33%;
+    font-size: 13px;
+    border-radius: 12px;
+    border: 3px solid #9192dd;
+    box-sizing: border-box;
+    background-color: #9192dd;
+    z-index: 100;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+ .s-signin-inner:hover {
+    box-shadow: 0 0 20px #6b68a9;
+}
+.next {
+position: absolute;
+    width: 70%;
+    height: 3.88rem;
+    top: 16%;
+    left: 14%;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.s-signin {
+  position: relative;
+  border-radius: var(--br-xl);
+  background: linear-gradient(183.64deg, #8080d7, #88d0d1);
+  backdrop-filter: blur(4px);
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  font-size: 1vw;
+  color: var(--color-white);
+  font-family: var(--h1);
+}
+/* student sign in pop up end*/
+
+/* instructer sign in pop up start*/
+.ins-signin-child{
+  position: absolute;
+  right: 24.24%;
+  top: 40.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 51.41%;
+  height: 8.03%;
+}
+
+.ins-signin-item {
+  position: absolute;
+  right: 24.24%;
+  top: 45.17%;
+  left: 24.35%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 51.41%;
+  height: 8.03%;
+  top: 60%;
+}
+.e-mail1{
+  position: absolute;
+  top: 31%;
+  font-size: 13px;
+  left: 0%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 3.88rem;
+}
+
+
+.password1 {
+  position: absolute;
+  font-size: 13px;
+  top: 52%;
+  left: 4%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 70%;
+  height: 1.38rem;
+}
+
+
+.sign-in1 {
+  position: absolute;
+  mix-blend-mode: normal;
+  width: 70%;
+  height: 3.88rem;
+  top: 4rem;
+  left: 14%;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.ins-signin-inner {
+color: white;
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    min-width: 13%;
+    top: 78%;
+    left: 33%;
+    font-size: 13px;
+    border-radius: 12px;
+    border: 3px solid #9192dd;
+    box-sizing: border-box;
+    background-color: #9192dd;
+    z-index: 100;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+}
+.ins-signin-inner:hover {
+    box-shadow: 0 0 20px #6b68a9;
+}
+.next1 {
+position: absolute;
+    width: 70%;
+    height: 3.88rem;
+    top: 16%;
+    left: 14%;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.ins-signin {
+  position: relative;
+  border-radius: var(--br-xl);
+  background: linear-gradient(183.64deg, #8080d7, #88d0d1);
+  backdrop-filter: blur(4px);
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  font-size: 1vw;
+  color: var(--color-white);
+  font-family: var(--h1);
+}
+/* instructer sign in pop up end*/
+
+/*  first section end*/
+
+/*  Second section start*/
+
+
+
+.panner-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+.watheeq3 {
+  position: absolute;
+  display: inline-block;
+  height: 9.06%;
+  width: 12.42%;
+  top: 58%;
+  left: 33%;
+  font-size: 7vw;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+}
+.dear-students-keep{
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  top: 69%;
+  left: 15%;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* images in the second section */
+.panner-item {
+  position: absolute;
+  height: 40%;
+  width: 70%;
+  top: 10%;
+  right: 7.47%;
+  bottom: 0%;
+  left: 12%;
+  mix-blend-mode: normal;
+}
+
+/* Boy image 12*/
+/* .image-12-icon{
+  position: absolute;
+  height: 69.53%;
+  width: 17.66%;
+  top: 10%;
+  right: 22.18%;
+  bottom: 20.47%;
+  left: 60.16%;
+  mix-blend-mode: normal;
+} */
+
+/* laptop image 13*/
+/* .image-13-icon{
+  position: absolute;
+  height: 27.83%;
+  width: 10.02%;
+  top: 14.22%;
+  right: 18.01%;
+  bottom: 57.95%;
+  left: 71.97%;
+} */
+
+
+/* girl image 15*/
+/* .image-15-icon{
+  position: absolute;
+  height: 78.28%;
+  width: 17.66%;
+  top: 1.25%;
+  right: 5.36%;
+  bottom: 20.47%;
+  left: 76.97%;
+
+} */
+
+/* phone image 16*/
+/* .image-16-icon {
+  position: absolute;
+  height: 22.66%;
+  width: 8.2%;
+  top: 24.84%;
+  right: 36.89%;
+  bottom: 52.5%;
+  left: 54.91%;
+ 
+} */
+
+
+
+/* images in the second section END */
+
+.panner {
+  position: absolute;
+  height: 14.63%;
+  width: 100.55%;
+  top: 23.25%;
+  right: -0.55%;
+  bottom: 62.13%;
+  left: 0;
+  font-size: 1vw;
+  background: linear-gradient(265.41deg, #9192dd, #86bbd3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  mix-blend-mode: normal;
+}
+
+.about-dark{
+  position: absolute;
+  top: 38%;
+  height: 16%;
+  width: 100%;
+  display: block;
+}
+
+.about-text{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  
+}
+
+.what-is-watheeq {
+  position: absolute;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: center;
+  font-size: 23px;
+  height: 0.94%;
+  width: 60%;
+  top: 85%;
+  margin: 30px;
+  text-align: center;
+  left: 17%;
+}
+
+.a-blockchain-base {
+    position: absolute;
+    line-height: 1.72rem;
+    text-transform: uppercase;
+    display: center;
+    font-size: 17px;
+    height: 0.94%;
+    width: 70%;
+    top: 90%;
+    margin: 30px;
+    text-align: center;
+    left: 12%;
+}
+
+.our-watheeq-website {
+  position: absolute;
+  left: 16%;
+  display: inline-block;
+  height: 2.97%;
+  width: 60%;
+  top: 108%;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  margin: 30px;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.image-17-icon {
+  position: absolute;
+  height: 30%;
+  width: 50%;
+  top: 12%;
+  /* right: 56.36%; */
+  /* bottom: 39.89%; */
+  left: 25%;
+  z-index: 10;
+}
+
+/*third section end*/
+/*fourth section start*/ 
+
+
+.our-names {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  top: 60%;
+  
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center; */
+  
+  min-height: 100vh;
+  /* background: linear-gradient(265.41deg, #9192dd, #86bbd3);  */
+  /* border-radius: 10px;
+  box-shadow: 14px 14px 15px 15px rgba(0, 0, 0, 0.25); */
+  text-align: center;
+}
+
+.team {
+  position: absolute;
+  flex: 1;
+  top: -26%;
+  left: 4%;
+}
+
+.member {
+  background-color: rgba(107, 104, 169, 50%);
+  margin: 10px;
+  color: aliceblue;
+  /* margin: 80px; */
+  padding: 20px;
+  /* height: 300px; */
+  border-radius: 15px;
+  text-transform: capitalize;
+  display: inline-block;
+  /* flex-direction: row; */
+  font-size: 1.5vw;
+  /* position: relative; */
+  /* z-index: 100; */
+}
+
+
+hr {
+  position: absolute;
+  top: -28%;
+  left: 47.5%;
+  width: 10%;
+  margin: 10px auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#meet-team {
+  position: absolute;
+  top: -30.3%;
+  left: 40%;
+  justify-content: center;
+  text-align: center;
+  font-size: 3vw;
+  text-transform: capitalize;
+}
+
+/* .reema-alolayan{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 11.96%;
+  left: 42.56%;
+
+}
+
+
+.aljazzie-bin-khozaim{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.01em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 15.8%;
+  left: 19.48%;
+}
+
+
+
+.reema-abukhalil{
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+
+  width: 12.73%;
+  left: 63.27%;
+
+}
+
+.emtenan-bin-sunaid{
+  position: absolute;
+  width: 14.95%;
+  top: 70.36%;
+  left: 0;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+}
+
+.fahda-alqahtani {
+  position: absolute;
+  top: 70.36%;
+  letter-spacing: 0.08em;
+  line-height: 1.72rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.1vw;
+  width: 12.96%;
+  left: 84.89%;
+} */
+
+/* .About-emtenan{
+
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+}
+
+.About-Aljazzie{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 19.63%;
+
+}
+
+.About-ReemaAlolayan{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 42.71%;
+
+}
+
+.About-ReemaAbu{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 63.42%;
+
+
+}
+
+
+.About-fahda{
+  position: absolute;
+  width: 14.95%;
+  top: 86.23%;
+  left: 0.15%;
+  font-size: 1vw;
+  letter-spacing: 0.02em;
+  font-family: var(--body);
+  color: var(--color-gainsboro);
+  display: inline-block;
+  left: 85.05%;
+
+} */
+
+
+.watheeq2 {
+  position: absolute;
+  width: 8.73%;
+  top: 91.5%;
+  left: 40.52%;
+  display: inline-block;
+  height: 0.59%;
+  font-family: var(--body);
+  font-size: 1.3vw;
+}
+.contact1{
+  height: 0.59%;
+  font-family: var(--body);
+  font-size: 1.3vw;
+  width: 9.88%;
+  top: 91.59%;
+  left: 51.58%;
+  position: absolute;
+  display: inline-block;
+}
+
+
+.home-about {
+  position: absolute;
+  height: 3.77%;
+  width: 5.33%;
+  top: 92.69%;
+  left: 41.64%;
+  line-height: 1.94rem;
+  font-family: var(--body);
+  display: inline-block;
+}
+
+
+
+
+.email-linkedin-instagram-container{
+  position: absolute;
+  top: 92.69%;
+  line-height: 1.94rem;
+  font-family: var(--body);
+  display: inline-block;
+  height: 3.77%;
+  width: 5.7%;
+  left: 52.4%;
+
+}
+
+ 
+.image-11-icon {
+  position: absolute;
+  height: 6%;
+  width: 17%;
+  top: 90.94%;
+  right: 3.27%;
+  bottom: 1.46%;
+  left: 80.67%;
+  border-radius: 26px;
+}
+
+.footer{
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom:27.49%;
+  background: linear-gradient(265.41deg, #9192dd, #86bbd3);
+}
+
+.logo-footer{
+  position: absolute;
+  bottom: 0%;
+}
+
+.img-footer{
+  height: 8%;
+  width: 8%;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+@keyframes popup-overlay{
+  from{
+    margin-top:100%;
+    height: 200%;
+  }
+  to{
+    margin-top:0%;
+    height: 60%;
+  }
+}
+
+}
+
+
+
+

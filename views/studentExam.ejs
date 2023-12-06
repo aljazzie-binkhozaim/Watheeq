@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="/styles/s-exam-global.css" />
+  <link rel="stylesheet" href="/styles/s-exam.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source Sans 3:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+
+  <link rel="icon" href="./images/favicon.ico">
+
+  <style>
+    .qButtons {
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+    }
+
+    .qButtons button {
+      padding: .5rem 1rem;
+      background-color: steelblue;
+      border: none;
+      outline: none;
+      color: white;
+      border-radius: .4rem;
+    }
+
+    .nmq {
+      position: absolute;
+      top: 7%;
+      left: 35%;
+
+    }
+  </style>
+
+<style>
+  .progress-container {
+    width: 100%;
+    background-color: #c80606;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #4CAF50; /* Green color */
+  }
+</style>
+</head>
+
+<body>
+
+ 
+  <div class="s-exam-emtenan">
+    <% if(exam){ %>
+      <% if(exam.questions.length> qid ) { %>
+        <div class="questions">
+          <div class="q1">
+            <form action="/submitQuestion" method="post" id="quiz-form">
+              <input type="hidden" value="<%= exam._id %>" name="examId">
+              <input type="hidden" value="<%= qid %>" name="qid">
+              <input type="hidden" value="<%- exam.questions[qid]._id %>" name="question_id">
+              <input type="hidden" value="<%- exam.questions[qid].correctAnswerIndex %>" name="correctAnswer">
+              <input type="hidden" value="<%- exam.questions[qid].grade %>" name="questionGrade">
+              <label for="op4" class="outscreen"><%- exam.questions[qid].choices[3] %></label>
+              <label for="op3" class="systemout"><%- exam.questions[qid].choices[2] %></label>
+              <label for="op2" class="systemoutprint"><%- exam.questions[qid].choices[1] %></label>
+              <label for="op1" class="print"><%- exam.questions[qid].choices[0] %></label>
+              <input id="op4" class="option-4" value="3" type="radio" name="option" />
+
+              <input id="op3" class="option-3" value="2" type="radio" name="option" />
+
+              <input id="op2" class="option-2" value="1" type="radio" name="option" />
+
+              <input id="op1" class="option-1" value="0" type="radio" name="option" />
+
+              <div class="what-is-the"><%- exam.questions[qid].question %>:</div>
+              <div class="q1-item"></div>
+              <div class="points"><%- exam.questions[qid].grade %></div>
+              <div class="point-box"></div>
+              <div class="question-1">Question <%- Number(qid) + 1%></div>
+
+              <!-- <button class="save-button" autofocus="{true}" form>Save</button> -->
+              <div class="qButtons">
+                <button class="" type="submit"> 
+                <% let dd =  Number(exam.questions.length) - 1 %>
+                  <%- Number(dd) === Number(qid) ? "Finish" : "Next" %>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <% }else{ %>
+
+            <p class="nmq">No More questions</p>
+            <%}%>
+              <%}%>
+        </div>
+        <div class="quize-outlines">
+          <!-- <div class="quize-outlines-child"></div> -->
+          <div class="">
+            <div class="progress-container" style="width: 20rem;">
+              <div class="time-line">
+                <div class="progress-bar quize-outlines-child" id="progress-bar"></div>
+              </div>
+            </div>
+            <p id="timer" style="display: none;">00:00</p>
+          </div>
+        
+          <div class="csc311-quiz-1-container">
+            <p class="csc311">CSC311</p>
+            <p class="quiz-1">
+              <%= exam.title %>
+            </p>
+          </div>
+          <div class="div">
+            <%= durationMinutes %>m
+          </div>
+        </div>
+        <div class="save-submit-group">
+          <div class="save-submit-rectangle"></div>
+
+        </div>
+  </div>
+
+  <script>
+    // JavaScript code for handling form submission
+    document.addEventListener('DOMContentLoaded', function () {
+      const quizForm = document.getElementById('quiz-form');
+
+      quizForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const selectedOption = document.querySelector('input[type=radio]:checked');
+        if (selectedOption) {
+          const answer = selectedOption.value;
+
+          // Create a hidden input field to store the answer and add it to the form
+          const hiddenInput = document.createElement('input');
+          hiddenInput.type = 'hidden';
+          hiddenInput.name = 'answer'; // Set the name to 'answer' to match the server-side code
+          hiddenInput.value = answer;
+          quizForm.appendChild(hiddenInput);
+
+          // Submit the form
+          quizForm.submit();
+        } else {
+          alert('Please select an answer.');
+        }
+      });
+    });
+
+
+
+</script>
+
+<script>
+  function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    const progressBar = document.getElementById("progress-bar");
+
+    const intervalId = setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      const remainingTimePercentage = (timer / duration) * 100;
+      progressBar.style.width = remainingTimePercentage + "%";
+
+      if (--timer < 0) {
+        // Clear the interval when the timer reaches 00:00
+        clearInterval(intervalId);
+        display.textContent = "00:00";
+        progressBar.style.width = "0%";
+        document.getElementById("timer-message").textContent = "Time's up!";
+        // You can also perform actions like submitting the quiz here
+      }
+    }, 1000);
+  }
+
+  const quizDuration = `<%= durationMinutes %>` * 60; // Change to the duration of your quiz in seconds
+  const timerDisplay = document.getElementById("timer");
+  startTimer(quizDuration, timerDisplay);
+</script>
+
+
+</body>
+
+</html>

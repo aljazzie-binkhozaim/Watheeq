@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --font-source-sans-3: "Source Sans 3";
+  --font-catamaran: Catamaran;
+  --font-noto-sans: "Noto Sans";
+  --font-outfit: Outfit;
+
+  /* font sizes */
+  --font-size-6xl: 1.56rem;
+  --font-size-lg: 1.13rem;
+  --font-size-21xl: 2.5rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-midnightblue: #22277a;
+  --color-thistle: #c5c1ed;
+  --color-darkslateblue-100: #6b68a9;
+  --color-lightsteelblue: rgba(190, 187, 231, 0.46);
+  --color-skyblue: #86bbd3;
+
+  /* Paddings */
+  --padding-3xs: 0.63rem;
+  --padding-36xl: 3.44rem;
+
+  /* Border radiuses */
+  --br-8xs: 5px;
+  --br-3xs: 10px;
+}

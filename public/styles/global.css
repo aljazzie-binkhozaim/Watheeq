@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.popup-overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0;
+}
+
+:root {
+  /* fonts */
+  --h1: Outfit;
+  --font-work-sans: "Work Sans";
+  --body: Roboto;
+
+  /* font sizes */
+  --font-size-5xl: 1.5rem;
+  --font-size-lg: 1.13rem;
+  --body-size: 1.25rem;
+  --font-size-base: 1rem;
+  --font-size-21xl: 2.5rem;
+  --sub-heading-size: 1.63rem;
+  --h1-size: 5.44rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro: #e5e5e5;
+
+  /* Border radiuses */
+  --br-31xl: 50px;
+  --br-xl: 20px;
+  --br-8xs: 5px;
+}

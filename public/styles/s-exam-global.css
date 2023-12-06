@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-outfit: Outfit;
+  --font-source-sans-3: "Source Sans 3";
+
+  /* font sizes */
+  --font-size-7xl: 1.63rem;
+  --font-size-16xl: 2.19rem;
+  --font-size-11xl: 1.88rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-thistle: #beb1da;
+  --color-darkslateblue-100: #4b2e68;
+  --color-midnightblue: #22277a;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+  --br-71xl: 90px;
+}
